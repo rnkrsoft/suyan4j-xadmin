@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row layui-col-space5">
+				<div class="layui-col-sm3">
+					<input id="test1" type="text" class="layui-input" />
+				</div>
+				<div class="layui-col-sm3">
+					<input id="test2" type="text" class="layui-input" />
+				</div>
+				<div class="layui-col-sm3">
+					<input id="test3" type="text" class="layui-input" />
+				</div>
+				<div class="layui-col-sm3">
+					<input id="test4" type="text" class="layui-input" />
+				</div>
+			</div>
+			<div class="layui-row layui-col-space5">
+				<div class="layui-col-sm3">
+					<input id="test5" type="text" class="layui-input" />
+				</div>
+				<div class="layui-col-sm3">
+					<input id="test6" type="text" class="layui-input" />
+				</div>
+				<div class="layui-col-sm3">
+					<input id="test7" type="text" class="layui-input" />
+				</div>
+				<div class="layui-col-sm3">
+					<input id="test8" type="text" class="layui-input" />
+				</div>
+			</div>
+		</div>
+		<span id="testView"></span>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+			laydate.render({
+				elem: '#test1', //指定元素
+				type: 'year'
+			});
+
+			laydate.render({
+				elem: '#test2', //指定元素
+				type: 'month'
+			});
+
+			laydate.render({
+				elem: '#test3', //指定元素
+				type: 'time'
+			});
+
+			laydate.render({
+				elem: '#test4', //指定元素
+				type: 'datetime',
+				format: 'yyyy-MM-dd HH:mm:ss',
+				value: '2017-09-10 01:02:03',
+				isInitValue: true, //是否允许填充初始值，默认为 true
+				min: '2017-1-1',
+				max: '2018-12-31',
+				showBottom: true,
+				theme: 'molv'
+			});
+
+			laydate.render({
+				elem: '#test5', //指定元素
+				type: 'datetime',
+				format: 'yyyy-MM-dd HH:mm:ss',
+				value: '2017-09-10 01:02:03',
+				isInitValue: true, //是否允许填充初始值，默认为 true
+				min: '2017-1-1',
+				max: '2018-12-31',
+				showBottom: true,
+				theme: 'molv',
+				mark: {
+					'0-10-14': '生日',
+					'0-12-31': '跨年', //每年12月31日
+					'0-0-10': '工资', //每个月10号
+					'2017-8-15': '', //具体日期
+					'2017-8-20': '预发', //如果为空字符，则默认显示数字+徽章
+					'2017-8-21': '发布'
+				}
+			});
+		});
+	</script>
+
+</html>

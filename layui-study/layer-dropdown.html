@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+		<style type="text/css">
+			.downpanel {
+		    z-index:99;
+		    padding: 0;
+		}
+		
+		.downpanel .layui-select-title {
+		    padding-right: 30px;
+		    padding-left: 10px;
+		}
+		
+		.downpanel dl {
+		    color: #000;
+		    top: 30px;
+		    font-size: 14px;
+		}
+		
+		.downpanel .layui-select-title i {
+		    border-top-color: #fff;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="layui-btn-group layui-form">
+            <button type="button" class="layui-btn layui-btn-sm layui-unselect layui-form-select downpanel" id="BatchBtn">
+                <div class="layui-select-title">
+                    编辑&#12288;&#12288;
+                    <i class="layui-edge"></i>
+                </div>
+                <dl class="layui-anim layui-anim-upbit">
+                    <dd lay-event="update" title="修改企业信息">
+                        <i class=""></i>
+                        修改信息
+                    </dd>
+                </dl>
+            </button>
+        </div>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(["form"],function() {
+		    var form=layui.form,$=layui.jquery;
+		    //下拉菜单
+		    $(".downpanel").on("click",".layui-select-title",function(e){
+		      $(".layui-form-select").not($(this).parents(".layui-form-select")).removeClass("layui-form-selected");
+		      $(this).parents(".layui-form-select").toggleClass("layui-form-selected");
+		      e.stopPropagation();
+		    });
+		    $(document).click(function(event){
+		      //搜索框
+		      var _con2 = $(".downpanel");
+		      if(!_con2.is(event.target) && (_con2.has(event.target).length ===0)){
+		         _con2.removeClass("layui-form-selected");
+		         console.log(_con2);
+		      }
+		    });    
+		
+		});
+	</script>
+
+</html>

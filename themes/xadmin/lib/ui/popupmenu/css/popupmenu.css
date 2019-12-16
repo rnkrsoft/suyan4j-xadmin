@@ -1,0 +1,94 @@
+.popupMenu {
+	/*transform: translateY(10px);*/
+	position: absolute;
+	z-index: 102;
+	display: block;
+	width: 168px;
+	transition: -webkit-transform 0.4s ease 0s;
+	font-size: 12px;
+	/*禁止弹出菜单可以复制文本*/
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.popupMenu ul {
+	display: block;
+	line-height: 24px;
+	box-shadow: 1px 1px 1px #999;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	background: rgb(255, 255, 255);
+	border-width: thin;
+	border-style: solid;
+	border-color: rgb(186, 186, 186);
+	border-image: initial;
+}
+
+
+/*菜单分割线*/
+
+.popupMenu ul .menu-separator {
+	height: 1px;
+	border-bottom: thin solid rgb(186, 186, 186, 0.6);
+}
+
+.popupMenu ul .menu-item {
+	height: 24px;
+}
+
+.popupMenu .menu-item > div {
+	padding: 0 2px 0 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+}
+
+.popupMenu ul li>ul {
+	position: absolute;
+	left: -100%;
+	width: 100%;
+	top: -1px;
+	display: block;
+}
+
+.popupMenu ul>li:hover {
+	background: rgb(236, 236, 236);
+}
+
+.popupMenu .popupMenu-menu-icon {
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.popupMenu .popupMenu-menu-child {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 12px;
+	width: 12px;
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 10px;
+	color: #666;
+}
+
+.popupMenu .menu-item-title {
+	text-align: left;
+	width: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	white-space: nowrap;
+}

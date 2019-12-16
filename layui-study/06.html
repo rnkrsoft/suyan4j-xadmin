@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+	<body>
+		<div class="container">
+			<ul class="layui-nav" lay-filter="">
+				<li class="layui-nav-item"><a href="">最新活动</a></li>
+				<li class="layui-nav-item"><a href="">产品</a></li>
+				<li class="layui-nav-item"><a href="">大数据</a></li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">解决方案</a>
+					<dl class="layui-nav-child">
+						<dd><a href="javascript:alert('this is a test1!');">移动模块</a></dd>
+						<dd><a href="javascript:alert('this is a test2!');">后台模版</a></dd>
+						<dd><a href="javascript:alert('this is a test3!');">电商平台</a></dd>
+					</dl>
+				</li>
+	  			<li class="layui-nav-item"><a href="">社区</a></li>
+			</ul>
+		</div>
+		
+		<div style="height: 100%;">
+			<ul class="layui-nav layui-nav-tree">
+			  <li class="layui-nav-item">
+			    <a href="javascript:;">默认展开</a>
+			    <dl class="layui-nav-child">
+			      <dd><a href="javascript:;">选项1</a></dd>
+			      <dd><a href="javascript:;">选项2</a></dd>
+			      <dd><a href="">跳转</a></dd>
+			    </dl>
+			  </li>
+			  <li class="layui-nav-item">
+			    <a href="javascript:;">解决方案</a>
+			    <dl class="layui-nav-child">
+			      <dd><a href="">移动模块</a></dd>
+			      <dd><a href="">后台模版</a></dd>
+			      <dd><a href="">电商平台</a></dd>
+			    </dl>
+			  </li>
+			  <li class="layui-nav-item"><a href="">产品</a></li>
+			  <li class="layui-nav-item"><a href="">大数据</a></li>
+			</ul>
+		</div>
+		<span class="layui-breadcrumb" lay-separator="-">
+		  <a href="">首页</a>
+		  <a href="">国际新闻</a>
+		  <a href="">亚太地区</a>
+		  <a><cite>正文</cite></a>
+		</span>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		//注意：导航 依赖 element 模块，否则无法进行功能性操作
+		layui.use('element', function(){
+		  var element = layui.element;
+		  
+		  //…
+		});
+	</script>
+</html>

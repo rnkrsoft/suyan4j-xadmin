@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		<!-- http://layer.layui.com/skin.html#publish -->
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				offset: ['100px', '50px'],
+				content: '传入任意的文本或html'
+			});
+		});
+		
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				offset: 't',
+				content: '快捷设置顶部坐标'
+			});
+		});
+		
+		
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				offset: 'r',
+				content: '快捷设置右边缘坐标'
+			});
+		});
+		
+				
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				offset: 'b',
+				content: '快捷设置底部坐标'
+			});
+		});
+		
+				layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				offset: 'l',
+				content: '快捷设置左边缘坐标'
+			});
+		});
+		
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				offset: 'rb',
+				content: '快捷设置右下角'
+			});
+		});
+	</script>
+
+</html>

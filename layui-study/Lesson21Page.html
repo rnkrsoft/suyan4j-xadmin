@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <title>查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi">
+        <!-- font:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.font.css -->
+        <link rel="stylesheet" id="font_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/css/font.css"/>
+        <!-- layer:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.css.modules.layer.default.layer.css -->
+        <link rel="stylesheet" id="layer_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/layui/css/modules/layer/default/layer.css"/>
+        <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.xadmin.css -->
+        <link rel="stylesheet" id="xadmin_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/css/xadmin.css"/>
+        <!-- suyan4j-icon:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.fonts.suyan4j-icon.suyan4j-icon.css -->
+        <link rel="stylesheet" id="suyan4j-icon_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/fonts/suyan4j-icon/suyan4j-icon.css"/>
+        <!-- popupmenu:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.ui.popupmenu.css.popupmenu.css -->
+        <link rel="stylesheet" id="popupmenu_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/ui/popupmenu/css/popupmenu.css"/>
+        <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.container.XadminBreadcrumbContainer -->
+        <style type="text/css">
+            .xadmin-breadcrumb{-webkit-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+        </style>
+        <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.container.XadminClassicQueryContainer -->
+        <style type="text/css">
+            .layui-fluid{
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="x-nav xadmin-breadcrumb">
+            <span class="layui-breadcrumb">
+                <a href="javascript:alert('待实现');">Lesson21Page</a>
+                <a href="javascript:alert('待实现');"><cite>查询</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right;height:auto;" onclick="location.reload()" title="刷新">
+                <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+            </a>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <!--条件区-->
+                        <div class="layui-card-body ">
+                            <div class="layui-collapse" lay-filter="test">
+                                <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">条件<i class="layui-icon layui-colla-icon"></i></h2>
+                                    <div class="layui-colla-content  layui-show">
+                                        <div class="layui-form layui-col-space5" action="">
+                                        <!-- 组件位置 -->
+                                            <div class="layui-form-item">
+                                                <label class='layui-form-label'>文本信息1</label>
+                                                <div class='layui-inline layui-show-xs-block'>
+                                                    <input type='text' name='text1' id='root__WebClassicFormContainer_main__WebTextComponent_text1' placeholder='' style='' autocomplete='off' class='layui-input' value=''>
+                                                </div>
+                                            </div>
+                                            <div class="layui-form-item">
+                                                <div class="layui-input-block" style="text-align: right;">
+                                                <button class='layui-btn ' id='root__WebClassicFormContainer_main__WebButtonComponent_queryUser1'><i class='layui-icon'></i>查询用户1</button>
+                                                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--表格结果-->
+                        <div class="layui-card-body ">
+                            <table id='root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1' lay-filter='root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1'></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- jquery:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.vendors.jquery.jquery.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/javax/web/suyan4j/vendors/jquery/jquery.js"></script>
+    <!-- layui:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.layui.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/layui/layui.js"></script>
+    <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.js.xadmin.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/js/xadmin.js"></script>
+    <!-- message:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.framework.message.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/framework/message.js"></script>
+    <!-- ajaxExecutor:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.ajaxExecutor.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/javax/web/suyan4j/ajaxExecutor.js"></script>
+    <!-- expressions:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.ui.popupmenu.js.expressions.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/ui/popupmenu/js/expressions.js"></script>
+    <!-- popupmenu:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.ui.popupmenu.js.popupmenu.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/ui/popupmenu/js/popupmenu.js"></script>
+    <!-- numbers:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.numbers.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/javax/web/suyan4j/numbers.js"></script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminTextComponent -->
+    <script type="text/javascript">
+        /**
+         * 
+         * @param {Object} value 变量值
+         */
+        function setValue__root__WebClassicFormContainer_main__WebTextComponent_text1(value){
+            $("#root__WebClassicFormContainer_main__WebTextComponent_text1").val(value);
+        }
+        function getValue__root__WebClassicFormContainer_main__WebTextComponent_text1(){
+            return $("#root__WebClassicFormContainer_main__WebTextComponent_text1").val();
+        }
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminButtonComponent -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminPaginationTableComponent -->
+    <script type="text/html" id="root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1__popupmenu">
+            <div class="layui-dropdown">
+                <!--操作按钮-->
+                <button class="dropdown-button" lay-event="showPopupMenu">操作<i class="dropdown-button suyan4j-icon suyan4j-icon-align-border-bottom"></i></button>
+            </div>
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminPaginationTableComponent -->
+    <script type="text/javascript">
+            var example4 = [{
+			"id": "1",
+			"icon": "suyan4j-icon-layer-group-fill",
+			"class": "",
+			"stylesheet": "",
+			"title": "打印(P)…",
+			"hint": "打印当前文章",
+			"rules": [{
+				"expression": 'true',
+				"method": 'show'
+			}],
+			"type": "button", //button或者menu
+			"menus": []
+		}, {
+			"stylesheet": "",
+			"type": "separator"
+		}, {
+			"id": "2",
+			"icon": "suyan4j-icon-app-fill",
+			"class": "",
+			"stylesheet": "",
+			"title": "投射(C)…",
+			"hint": "投射当前内容到远程",
+			"rules": [{
+				"expression": 'true',
+				"method": 'show'
+			}],
+			"type": "button", //button或者menu
+			"menus": []
+		}];
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminPaginationTableComponent -->
+    <script type="text/javascript">
+        /**
+         * 分页表格初始化方法
+         */
+        function init__root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1(){
+        layui.use('table', function() {
+			var table = layui.table;
+			//执行一个laypage实例
+			table.render({
+				elem: '#root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1',
+				height: "full",
+				toolbar: true,//开启表格头部工具栏区域
+				loading:true,//是否显示加载条（默认：true）。如果设置 false，则在切换分页时，不会出现加载条。该参数只适用于 url 参数开启的方式
+				url: 'data/table.json', //数据接口
+				page: true, //开启分页
+				limit : 25, //默认每页显示记录数
+				where: {
+					"product" : "DemoModule1",
+					"action" : "Lesson1Page",
+					"subAction" : "queryTable1",
+					"data" : {
+						"name" : "测试",
+						"age1" : 22
+					}
+				},
+				//自定义的请求数组组装函数
+				requestData : function(curr, limit, where){
+					var data = where.data;
+					data.pagination = {};
+					data.pagination.pageNo = curr;
+					data.pagination.pageSize = limit;
+					return where;
+				},
+				parseData: function(res){ //res 即为原始返回的数据
+				    return {
+				      "code": res.result.code, //解析接口状态
+				      "msg": res.result.desc, //解析提示文本
+				      "count": res.pagination.total, //解析数据长度
+				      "data": res.records //解析数据列表
+				    };
+				},
+				contentType: 'application/json',
+				cols: [
+					[ //表头
+						{
+							field: 'id',
+							title: 'ID',
+							width: 80,
+							sort: true,
+							fixed: 'left',
+							type:'numbers',
+						}, {
+							field: 'username',//设定字段名。字段名的设定非常重要，且是表格数据列的唯一标识
+							title: '用户名',//设定标题名称
+							width: 100,//设定列宽，若不填写，则自动分配；若填写，则支持值为：数字、百分比,请结合实际情况，对不同列做不同设定。
+							minWidth:80,//局部定义当前常规单元格的最小宽度
+							type:'normal',
+//							fixed:'right',
+							hide:false,//是否初始隐藏列
+							unresize:true,
+//							style:'background-color: #888; color: #999;',
+							align:'center',
+//							colspan:2,
+//							rowspan:2,
+//							templet: "#titleTpl"
+//							templet: function(d){
+//								return "<div><a href='/detail111/"+ d.id +"' class='layui-table-link'>"+ d.username +"</a></div>";
+//							}
+							templet: "<div><a href='/detail2222/{{d.id}}' class='layui-table-link'>{{d.username}}</a></div>"
+						}, {
+							field: 'sex',
+							title: '性别',
+							width: 80,
+							sort: true
+						}, {
+							field: 'city',
+							title: '城市',
+							width: 800
+						}, {
+							field: 'sign',
+							title: '签名',
+							width: 177
+						}, {
+							field: 'experience',
+							title: '积分',
+							width: 80,
+							sort: true
+						}, {
+							field: 'score',
+							title: '评分',
+							width: 80,
+							sort: true
+						}, {
+							field: 'classify',
+							title: '职业',
+							width: 80,
+							templet: '#classifyTpl'
+						}, {
+							field: 'wealth',
+							title: '财富',
+							width: 135,
+							sort: true
+						},{
+							title: '操作',
+							width: 80,
+							fixed: 'right',
+							toolbar: "#root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1__popupmenu"
+						}
+					]
+				]
+			});
+			
+			//监听工具条 
+			table.on('tool(root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+			  var row = obj.data; //获得当前行数据
+			  var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+			  var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+			  //操作按钮触发弹出菜单
+			  if(layEvent === 'showPopupMenu'){ //展示下拉菜单
+			    var _this = $(this);
+				$('body').showPopupMenu(example4, _this, row);
+			  }
+			});});
+        }
+        /**
+         * 刷新分页表格
+         * @param {Object} url 
+         * @param {Object} product 
+         * @param {Object} action 
+         * @param {Object} subAction 
+         * @param {Object} request 
+         */
+        function refreshTable__root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1(url, product, action, subAction, request){
+
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        init__root__WebClassicFormContainer_main__WebPaginationTableComponent_queryUser1();
+    </script>
+</html>

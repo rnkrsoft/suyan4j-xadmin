@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <!-- font:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.font.css -->
+        <link rel="stylesheet" id="font_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/css/font.css"/>
+        <!-- layer:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.css.modules.layer.default.layer.css -->
+        <link rel="stylesheet" id="layer_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/lib/layui/css/modules/layer/default/layer.css"/>
+        <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.xadmin.css -->
+        <link rel="stylesheet" id="xadmin_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/css/xadmin.css"/>
+        <link rel="stylesheet" href="/suyan4j-xadmin/javax/web/suyan4j/fonts/suyan4j-icon/suyan4j-icon.css" />
+		<link rel="stylesheet" href="/suyan4j-xadmin/themes/xadmin/lib/layui/css/layui.css" />
+        <link rel="stylesheet" href="/suyan4j-xadmin/themes/xadmin/lib/ui/popupmenu/css/popupMenu.css">
+	</head>
+
+	<body>
+		<table id="demo" lay-filter="test"></table>
+	</body>
+	<script type="text/html" id="titleTpl">
+  		<a href="/detail/{{d.id}}" class="layui-table-link">{{d.username}}</a>
+	</script>
+	<script type="text/html" id="classifyTpl">
+	  {{#  if(d.id == 1){ }}
+	    <a href="/detail/{{d.id}}" class="layui-table-link">{{d.username}}</a>
+	  {{#  } else { }}
+	    {{d.username}}(普通用户)
+	  {{#  } }}
+	</script>
+    <!-- jquery:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.vendors.jquery.jquery.js -->
+    <script type="text/javascript" src="/suyan4j-xadmin/javax/web/suyan4j/vendors/jquery/jquery.js"></script>
+    <!-- layui:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.layui.js -->
+    <script type="text/javascript" src="/suyan4j-xadmin/themes/xadmin/lib/layui/layui.js"></script>
+	<script>
+		layui.use('table', function() {
+			var table = layui.table;
+			//执行一个laypage实例
+			table.render({
+				elem: '#demo',
+				height: 312,
+				toolbar: true,//开启表格头部工具栏区域
+				loading:true,//是否显示加载条（默认：true）。如果设置 false，则在切换分页时，不会出现加载条。该参数只适用于 url 参数开启的方式
+				url: '/suyan4j-xadmin/data/table.json', //数据接口
+				page: true, //开启分页
+				limit : 25, //默认每页显示记录数
+				where: {
+					"product" : "DemoModule1",
+					"action" : "Lesson1Page",
+					"subAction" : "queryTable1",
+					"data" : {
+						"name" : "测试",
+						"age1" : 22
+					}
+				},
+//				contentType: 'application/json',
+				//自定义的请求数组组装函数
+				requestData : function(curr, limit, where){
+					var data = where.data;
+					data.pagination = {};
+					data.pagination.pageNo = curr;
+					data.pagination.pageSize = limit;
+					return where;
+				},
+				parseData: function(res){ //res 即为原始返回的数据
+				    return {
+				      "code": res.result.code, //解析接口状态
+				      "msg": res.result.desc, //解析提示文本
+				      "count": res.pagination.total, //解析数据长度
+				      "data": res.records //解析数据列表
+				    };
+				},
+				cols: [
+					[ //表头
+						{
+							field: 'id',
+							title: 'ID',
+							width: 80,
+							sort: true,
+							fixed: 'left',
+							type:'numbers',
+						}, {
+							field: 'username',//设定字段名。字段名的设定非常重要，且是表格数据列的唯一标识
+							title: '用户名',//设定标题名称
+							width: 100,//设定列宽，若不填写，则自动分配；若填写，则支持值为：数字、百分比,请结合实际情况，对不同列做不同设定。
+							minWidth:80,//局部定义当前常规单元格的最小宽度
+							type:'normal',
+//							fixed:'right',
+							hide:false,//是否初始隐藏列
+							unresize:true,
+							style:'background-color: #888; color: #999;',
+							align:'center',
+//							templet: "#titleTpl" 	//1.使用片段模板渲染
+//							templet: function(d){   //2.使用渲染函数
+//								return "<div><a href='/detail111/"+ d.id +"' class='layui-table-link'>"+ d.username +"</a></div>";
+//							}
+							//						3.使用字符串方式
+							//https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&ch=&tn=baiduerr&bar=&wd=关键字
+							templet: "<div><a href='//www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&ch=&tn=baiduerr&bar=&wd={{d.id}}' class='layui-table-link'>{{d.username}}</a></div>"
+						}, {
+							field: 'sex',
+							title: '性别',
+							width: 80,
+							sort: true,
+							unresize:false//是否可以调整宽度
+						}, {
+							field: 'city',
+							title: '城市',
+							width: 100,
+							unresize:true//是否可以调整宽度
+						}, {
+							field: 'sign',
+							title: '签名',
+							width: 177,
+							unresize:false//是否可以调整宽度
+						}, {
+							field: 'experience',
+							title: '积分',
+							width: 80,
+							sort: true,
+							unresize:true//是否可以调整宽度
+						}, {
+							field: 'score',
+							title: '评分',
+							width: 80,
+							sort: true
+						}, {
+							field: 'classify',
+							title: '职业',
+							width: 80,
+							templet: '#classifyTpl'
+						}, {
+							field: 'wealth',
+							title: '财富',
+							width: 135,
+							sort: true
+						},{
+							title: '操作',
+							width: 200,
+							templet: "<div><btton class='layui-table-link' lay-event=''>{{d.username}}</btton></div>"
+						}
+					]
+				]
+			});
+			//监听工具条 
+			table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+			  var data = obj.data; //获得当前行数据
+			  var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+			  var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+			 
+			  if(layEvent === 'detail'){ //查看
+			    //do somehing
+			    alert('调用远程接口');
+			  }
+			});
+		});
+	</script>
+
+</html>

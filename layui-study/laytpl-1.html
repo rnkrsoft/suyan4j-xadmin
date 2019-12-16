@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+	<body>
+		<!--第二步：建立视图。用于呈现渲染结果。-->
+		<div id="view"></div>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<!--第一步：编写模版。你可以使用一个script标签存放模板，如：-->
+	<script id="demo" type="text/html">
+		<h3>{{ d.title }}</h3>
+		<ul>
+	  {{#  layui.each(d.list, function(index, item){ }}
+	    <li>
+	      <span>{{ item.modname }}</span>
+	      <span>{{ item.alias }}：</span>
+	      <span>{{ item.site || '' }}</span>
+	    </li>
+	  {{#  }); }}
+	  {{#  if(d.list.length === 0){ }}
+	    无数据
+	  {{#  } }} 
+	  </ul>
+	</script>
+	<script>
+		layui.use('laytpl', function() {
+			var laytpl = layui.laytpl;
+			laytpl('{{ d.name }}是一位公猿').render({ name: '贤心' }, function(text){
+				alert(text);
+			});
+			var string =  laytpl('{{ d.name }}是一位公猿').render({ name: '贤心' });
+			 console.log(string);
+			 
+			 var data = { //数据
+				  "title":"Layui常用模块",
+				  "list":[
+					  {"modname":"弹层","alias":"layer","site":"layer.layui.com"},
+					  {"modname":"表单","alias":"form"}
+				  ]
+				};
+				view = document.getElementById('view');
+				laytpl(demo.innerHTML).render(data, function(html){
+				  view.innerHTML = html;
+				});
+		});
+	</script>
+</html>

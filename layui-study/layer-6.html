@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+
+	<body>
+		<button id="xxxx">测试1</button>
+		<button id="yyyy">测试2</button>
+	</body>
+	<script type="text/javascript" src="vendors/jquery/jquery.js"></script>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		<!-- 类型：Number，默认：-1（信息框）/0（加载层）信息框默认不显示图标。当你想显示图标时，默认皮肤可以传入0-6如果是加载层，可以传入0-2。如： -->
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			$(document).ready(function() {
+				$('#xxxx').click(function() {
+					layer.open({
+						content: 'test',
+						btnAlign: 'c',
+						anim: 6,
+						moveOut: true,
+						btn: ['yes', 'no'],
+						yes: function(index, layero) {
+							 console.log(layero, index);
+							alert('按钮【按钮一】的回调');
+							return true;
+						},
+						cancel: function() {
+							alert('右上角关闭回调');
+							if(confirm('确定要关闭么')){ //只有当点击confirm框的确定时，该层才会关闭
+							    layer.close(index)
+							}
+							return false; 
+							//return false 开启该代码可禁止点击该按钮关闭
+						},
+						success: function(layero, index){
+						    console.log(layero, index);
+						}
+					});
+				});
+				
+				$('#yyyy').click(function() {
+					layer.open({
+						content: 'test',
+						btn: ['按钮一', '按钮二', '按钮三'],
+						yes: function(index, layero) {
+							console.log(index);
+							alert('按钮【按钮一】的回调');
+							return true;
+						},
+						btn2: function(index, layero) {
+							console.log(index);
+							alert('按钮【按钮二】的回调');
+
+							//return false 开启该代码可禁止点击该按钮关闭
+						},
+						btn3: function(index, layero) {
+							console.log(index);
+							alert('按钮【按钮三】的回调');
+
+							//return false 开启该代码可禁止点击该按钮关闭
+						},
+						cancel: function() {
+							alert('右上角关闭回调');
+
+							//return false 开启该代码可禁止点击该按钮关闭
+						}
+					});
+				});
+			});
+		});
+	</script>
+
+</html>

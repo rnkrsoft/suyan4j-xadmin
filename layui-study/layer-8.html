@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		<!-- 类型：Number，默认：-1（信息框）/0（加载层）信息框默认不显示图标。当你想显示图标时，默认皮肤可以传入0-6如果是加载层，可以传入0-2。如： -->
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			//页面一打开就执行弹层
+			layer.confirm('is not?', {icon: 3, title:'提示'}, function(index){
+				
+			  //do something
+			  layer.close(index);
+			  layer.msg('有表情地提示', {icon: 6}); 
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>02 - 演示栅格</title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css"/>
+		<style>
+			.b1{
+				background-color: pink;
+			}
+			.b2{
+				background-color: #2D93CA;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layui-container">  
+		  常规布局（以中型屏幕桌面为例）：
+		  <div class="layui-row">
+		    <div class="layui-col-md9">
+		      <div class="b1">你的内容 9/12</div>
+		    </div>
+		    <div class="layui-col-md3">
+		      <div class="b2">你的内容 3/12</div>
+		    </div>
+		  </div>
+		  移动设备、平板、桌面端的不同表现：
+			<div class="layui-row">
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+				  <div class="b1">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+				</div>
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+				  <div class="b2">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+				</div>
+				<div class="layui-col-xs4 layui-col-sm12 layui-col-md4">
+				  <div class="b1">移动：4/12 | 平板：12/12 | 桌面：4/12</div>
+				</div>
+				<div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
+				  <div class="b2">移动：4/12 | 平板：7/12 | 桌面：8/12</div>
+				</div>
+				<div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
+				  <div class="b1">移动：4/12 | 平板：5/12 | 桌面：4/12</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="layui-fluid">  
+		  常规布局（以中型屏幕桌面为例）：
+		  <div class="layui-row layui-col-space5">
+		    <div class="layui-col-md9">
+		      <div class="b1">你的内容 9/12</div>
+		    </div>
+		    <div class="layui-col-md3">
+		      <div class="b2">你的内容 3/12</div>
+		    </div>
+		  </div>
+		  移动设备、平板、桌面端的不同表现：
+			<div class="layui-row">
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+				  <div class="b1">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+				</div>
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+				  <div class="b2">移动：6/12 | 平板：6/12 | 桌面：4/12</div>
+				</div>
+				<div class="layui-col-xs4 layui-col-sm12 layui-col-md4">
+				  <div class="b1">移动：4/12 | 平板：12/12 | 桌面：4/12</div>
+				</div>
+				<div class="layui-col-xs4 layui-col-sm7 layui-col-md8">
+				  <div class="b2">移动：4/12 | 平板：7/12 | 桌面：8/12</div>
+				</div>
+				<div class="layui-col-xs4 layui-col-sm5 layui-col-md4">
+				  <div class="b1">移动：4/12 | 平板：5/12 | 桌面：4/12</div>
+				</div>
+			</div>
+		</div>
+		<div class="layui-fluid">  
+			<div class="layui-row">
+			  <div class="layui-col-md4">
+			     <div class="b1">4/12</div>
+			  </div>
+			  <div class="layui-col-md4 layui-col-md-offset4">
+			     <div class="b2">偏移4列，从而在最右</div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="layui-row layui-col-space5">
+		  <div class="layui-col-md5">
+		    <div class="layui-row grid-demo">
+		      <div class="layui-col-md3">
+		        <div class="b1">内部列</div>
+		      </div>
+		      <div class="layui-col-md9">
+		        <div class="b2">内部列</div>
+		      </div>
+		      <div class="layui-col-md12">
+		        <div class="b1">内部列</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="layui-col-md7">
+		    <div class="layui-row grid-demo grid-demo-bg1">
+		      <div class="layui-col-md12">
+		       <div class="b2">内部列</div>
+		      </div>
+		      <div class="layui-col-md9">
+		       <div class="b1">内部列</div>
+		      </div>
+		      <div class="layui-col-md3">
+		       <div class="b2">内部列</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>

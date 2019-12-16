@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <title>日期框</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi">
+        <!-- font:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.font.css -->
+        <link rel="stylesheet" id="font_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/css/font.css"/>
+        <!-- layer:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.css.modules.layer.default.layer.css -->
+        <link rel="stylesheet" id="layer_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/layui/css/modules/layer/default/layer.css"/>
+        <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.xadmin.css -->
+        <link rel="stylesheet" id="xadmin_1.0.0" type="text/css" href="http://127.0.0.1:8020/Suyan4j/themes/xadmin/css/xadmin.css"/>
+        <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.container.XadminBreadcrumbContainer -->
+        <style type="text/css">
+            .xadmin-breadcrumb{-webkit-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+        </style>
+        <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.container.XadminClassicFormContainer -->
+        <style type="text/css">
+            .layui-fluid{
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="x-nav xadmin-breadcrumb">
+            <span class="layui-breadcrumb">
+                <a href="javascript:alert('待实现');">Lesson3Page</a>
+                <a href="javascript:alert('待实现');"><cite>日期框</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right;height:auto;" onclick="location.reload()" title="刷新">
+                <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+            </a>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <!--条件区-->
+                        <div class="layui-card-body ">
+                            <div class="layui-form layui-col-space5" action="">
+                            <!-- 组件位置 -->
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型1</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期1' name=date1 id='root__WebClassicFormContainer_main__WebDateComponent_date1'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型2</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期2' name=date2 id='root__WebClassicFormContainer_main__WebDateComponent_date2'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型3</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期3' name=date3 id='root__WebClassicFormContainer_main__WebDateComponent_date3'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型4</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期4' name=date4 id='root__WebClassicFormContainer_main__WebDateComponent_date4'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型5</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期5' name=date5 id='root__WebClassicFormContainer_main__WebDateComponent_date5'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型6</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期6' name=date6 id='root__WebClassicFormContainer_main__WebDateComponent_date6'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型7</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期7' name=date7 id='root__WebClassicFormContainer_main__WebDateComponent_date7'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型8</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期8' name=date8 id='root__WebClassicFormContainer_main__WebDateComponent_date8'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型9</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期9' name=date9 id='root__WebClassicFormContainer_main__WebDateComponent_date9'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型10</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期10' name=date10 id='root__WebClassicFormContainer_main__WebDateComponent_date10'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型11</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期11' name=date11 id='root__WebClassicFormContainer_main__WebDateComponent_date11'>
+                                    </div>
+                                </div>
+                                <div class='layui-inline layui-show-xs-block'>
+                                    <label class='layui-form-label'>日期类型12</label>
+                                    <div class='layui-input-inline'>
+                                        <input class='layui-input' autocomplete='off' placeholder='请输入日期12' name=date12 id='root__WebClassicFormContainer_main__WebDateComponent_date12'>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block" style="text-align: right;">
+                                        <button class='layui-btn ' id='root__WebClassicFormContainer_main__WebButtonComponent_add3'><i class='layui-icon'></i>新增3</button>
+                                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- jquery:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.vendors.jquery.jquery.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/javax/web/suyan4j/vendors/jquery/jquery.js"></script>
+    <!-- layui:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.layui.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/lib/layui/layui.js"></script>
+    <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.js.xadmin.js -->
+    <script type="text/javascript" src="http://127.0.0.1:8020/Suyan4j/themes/xadmin/js/xadmin.js"></script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date1(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date1',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd',
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date1(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date1').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date1(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date1').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date1();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date2(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date2',
+                    type: 'datetime',
+                    format: 'HH:mm:ss',
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date2(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date2').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date2(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date2').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date2();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date3(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date3',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd HH:mm:ss',
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date3(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date3').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date3(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date3').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date3();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date4(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date4',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd',
+                    value: '2019/01/01'
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date4(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date4').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date4(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date4').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date4();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date5(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date5',
+                    type: 'datetime',
+                    format: 'HH:mm:ss',
+                    value: '01:02:03'
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date5(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date5').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date5(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date5').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date5();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date6(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date6',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd HH:mm:ss',
+                    value: '2019/01/01 01:02:03'
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date6(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date6').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date6(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date6').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date6();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date7(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date7',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd',
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date7(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date7').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date7(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date7').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date7();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date8(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date8',
+                    type: 'datetime',
+                    format: 'HH:mm:ss',
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date8(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date8').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date8(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date8').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date8();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date9(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date9',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd HH:mm:ss',
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date9(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date9').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date9(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date9').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date9();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date10(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date10',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd',
+                    value: '2019/01/01'
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date10(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date10').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date10(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date10').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date10();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date11(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date11',
+                    type: 'datetime',
+                    format: 'HH:mm:ss',
+                    value: '01:02:03'
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date11(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date11').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date11(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date11').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date11();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminDateComponent -->
+    <script type="text/javascript">
+        function init__root__WebClassicFormContainer_main__WebDateComponent_date12(){
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+                laydate.render({
+                    elem: '#root__WebClassicFormContainer_main__WebDateComponent_date12',
+                    type: 'datetime',
+                    format: 'yyyy/MM/dd HH:mm:ss',
+                    value: '2019/01/01 01:02:03'
+                });
+            });
+        }
+        function getValue__root__WebClassicFormContainer_main__WebDateComponent_date12(){
+            return $('#root__WebClassicFormContainer_main__WebDateComponent_date12').val();
+        }
+        /**
+         * 
+         * @param {Object} value 
+         */
+        function setValue__root__WebClassicFormContainer_main__WebDateComponent_date12(value){
+            $('#root__WebClassicFormContainer_main__WebDateComponent_date12').val(value);
+        }
+        /**
+         * 调用日期初始化方法
+         */
+        $(document).ready(function(){ 
+            init__root__WebClassicFormContainer_main__WebDateComponent_date12();
+        });
+    </script>
+    <!-- anonymous providerClass:com.rnkrsoft.suyan4j.theme.xadmin.component.XadminButtonComponent -->
+    <script type="text/javascript">
+        /**
+         * 单击事件
+         * @param {Object} row 
+         */
+        function function__root__WebClassicFormContainer_main__WebButtonComponent_add3__click__1(row){
+            alert('this is a test');
+        }
+        $(document).ready(function(){ 
+            $('#root__WebClassicFormContainer_main__WebButtonComponent_add3').click(function(){
+                function__root__WebClassicFormContainer_main__WebButtonComponent_add3__click__1();
+            });
+        });
+    </script>
+</html>

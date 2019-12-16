@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+		<style type="text/css">
+			body .demo-class .layui-layer-title {
+				background: #c00;
+				color: #fff;
+				border: none;
+			}
+			
+			body .demo-class .layui-layer-btn {
+				border-top: 1px solid #E9E7E7
+			}
+			
+			body .demo-class .layui-layer-btn a {
+				background: #333;
+			}
+			
+			body .demo-class .layui-layer-btn .layui-layer-btn1 {
+				background: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		<!-- http://layer.layui.com/skin.html#publish -->
+		layui.use('layer', function() {
+			var layer = layui.layer;
+			layer.open({
+				type: 1,
+				//				skin: 'demo-class',
+//				area: ['500px', '300px'],
+//				area: ['auto', '300px'],
+				area: ['500px', 'auto'],
+				content: '传入任意的文本或html'
+			});
+		});
+	</script>
+
+</html>

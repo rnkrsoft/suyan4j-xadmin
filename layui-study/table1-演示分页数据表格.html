@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <!-- font:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.font.css -->
+        <link rel="stylesheet" id="font_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/css/font.css"/>
+        <!-- layer:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.css.modules.layer.default.layer.css -->
+        <link rel="stylesheet" id="layer_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/lib/layui/css/modules/layer/default/layer.css"/>
+        <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.xadmin.css -->
+        <link rel="stylesheet" id="xadmin_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/css/xadmin.css"/>
+        <link rel="stylesheet" href="/suyan4j-xadmin/javax/web/suyan4j/fonts/suyan4j-icon/suyan4j-icon.css" />
+		<link rel="stylesheet" href="/suyan4j-xadmin/themes/xadmin/lib/layui/css/layui.css" />
+        <link rel="stylesheet" href="/suyan4j-xadmin/themes/xadmin/lib/ui/popupmenu/css/popupMenu.css">
+	</head>
+
+	<body>
+		<table id="demo" lay-filter="test"></table>
+	</body>
+	<script type="text/html" id="titleTpl">
+  		<a href="/detail/{{d.id}}" class="layui-table-link">{{d.username}}</a>
+	</script>
+	<script type="text/html" id="classifyTpl">
+	  {{#  if(d.id == 1){ }}
+	    <a href="/detail/{{d.id}}" class="layui-table-link">{{d.username}}</a>
+	  {{#  } else { }}
+	    {{d.username}}(普通用户)
+	  {{#  } }}
+	</script>
+	<script type="text/html" id="barDemo">
+	  <a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+	  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+	  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	  
+	  <!-- 这里同样支持 laytpl 语法，如： -->
+	  {{#  if(d.auth > 2){ }}
+	    <a class="layui-btn layui-btn-xs" lay-event="check">审核</a>
+	  {{#  } }}
+	</script>
+    <!-- jquery:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.vendors.jquery.jquery.js -->
+    <script type="text/javascript" src="/suyan4j-xadmin/javax/web/suyan4j/vendors/jquery/jquery.js"></script>
+    <!-- layui:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.layui.js -->
+    <script type="text/javascript" src="/suyan4j-xadmin/themes/xadmin/lib/layui/layui.js"></script>
+	<script>
+		layui.use('table', function() {
+			var table = layui.table;
+			//执行一个laypage实例
+			table.render({
+				elem: '#demo',
+				height: 312,
+				toolbar: true,//开启表格头部工具栏区域
+				loading:true,//是否显示加载条（默认：true）。如果设置 false，则在切换分页时，不会出现加载条。该参数只适用于 url 参数开启的方式
+//				url: '/demo/table/user/', //数据接口
+				data: [
+					{
+						id:1,
+						username:'测试1',
+						sex:'男',
+						city:'重庆',
+						sign:'123456789',
+						classify:'接待员',
+						wealth:1234567890.00
+					},
+					{
+						id:2,
+						username:'测试2',
+						sex:'女',
+						city:'四川',
+						sign:'3456789',
+						classify:'出纳',
+						wealth:123457654.00
+					}
+				],
+				page: true, //开启分页
+				cols: [
+					[ //表头
+						{
+							field: 'id',
+							title: 'ID',
+							width: 80,
+							sort: true,
+							fixed: 'left',
+							type:'numbers',
+						}, {
+							field: 'username',//设定字段名。字段名的设定非常重要，且是表格数据列的唯一标识
+							title: '用户名',//设定标题名称
+							width: 100,//设定列宽，若不填写，则自动分配；若填写，则支持值为：数字、百分比,请结合实际情况，对不同列做不同设定。
+							minWidth:80,//局部定义当前常规单元格的最小宽度
+							type:'normal',
+							hide:false,//是否初始隐藏列
+							unresize:true,//是否可以调整宽度
+							align:'center',
+						}, {
+							field: 'sex',
+							title: '性别',
+							width: 80,
+							sort: true,
+							unresize:false//是否可以调整宽度
+						}, {
+							field: 'city',
+							title: '城市',
+							width: 100,
+							unresize:true//是否可以调整宽度
+						}, {
+							field: 'sign',
+							title: '签名',
+							width: 177,
+							unresize:false//是否可以调整宽度
+						}, {
+							field: 'experience',
+							title: '积分',
+							width: 80,
+							sort: true,
+							unresize:true//是否可以调整宽度
+						}, {
+							field: 'score',
+							title: '评分',
+							width: 80,
+							sort: true
+						}, {
+							field: 'classify',
+							title: '职业',
+							width: 80,
+							templet: '#classifyTpl'
+						}, {
+							field: 'wealth',
+							title: '财富',
+							width: 135,
+							sort: true
+						}
+					]
+				]
+			});
+		});
+	</script>
+
+</html>

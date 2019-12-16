@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>隔行背景</title>
+		<link rel="stylesheet" href="vendors/layui/css/layui.css" />
+	</head>
+
+	<body>
+		<div style="padding: 20px; ">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-md6">
+					<!--layui table-->
+					<!--用于开启 隔行 背景，可与其它属性一起使用-->
+					<table class="layui-table" lay-skin="row" lay-size="lg">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>昵称</th>
+								<th>加入时间</th>
+								<th>签名</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>贤心</td>
+								<td>2016-11-29</td>
+								<td>人生就像是一场修行</td>
+							</tr>
+							<tr>
+								<td>许闲心</td>
+								<td>2016-11-28</td>
+								<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+							</tr>
+							<tr>
+								<td>许闲心1</td>
+								<td>2016-11-29</td>
+								<td>this is a test!</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="layui-col-md6">
+					<table class="layui-table" lay-skin="line"  lay-size="sm">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>昵称</th>
+								<th>加入时间</th>
+								<th>签名</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>贤心</td>
+								<td>2016-11-29</td>
+								<td>人生就像是一场修行</td>
+							</tr>
+							<tr>
+								<td>许闲心</td>
+								<td>2016-11-28</td>
+								<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+							</tr>
+							<tr>
+								<td>许闲心1</td>
+								<td>2016-11-29</td>
+								<td>this is a test!</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="layui-table" lay-skin="row" lay-size="sm">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>昵称</th>
+								<th>加入时间</th>
+								<th>签名</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>贤心</td>
+								<td>2016-11-29</td>
+								<td>人生就像是一场修行</td>
+							</tr>
+							<tr>
+								<td>许闲心</td>
+								<td>2016-11-28</td>
+								<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+							</tr>
+							<tr>
+								<td>许闲心1</td>
+								<td>2016-11-29</td>
+								<td>this is a test!</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="layui-table" lay-even lay-skin="nob" lay-size="sm">
+						<colgroup>
+							<col width="150">
+							<col width="200">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>昵称</th>
+								<th>加入时间</th>
+								<th>签名</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>贤心</td>
+								<td>2016-11-29</td>
+								<td>人生就像是一场修行</td>
+							</tr>
+							<tr>
+								<td>许闲心</td>
+								<td>2016-11-28</td>
+								<td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+							</tr>
+							<tr>
+								<td>许闲心1</td>
+								<td>2016-11-29</td>
+								<td>this is a test!</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="vendors/layui/layui.js"></script>
+	<script>
+		//注意：导航 依赖 element 模块，否则无法进行功能性操作
+		layui.use('element', function() {
+			var element = layui.element;
+
+			//获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
+			var layid = location.hash.replace(/^#test1=/, '');
+			element.tabChange('test1', layid); //假设当前地址为：http://localhost/LayuiTest/tabs-5.html?test1=222，那么选项卡会自动切换到“发送消息”这一项
+
+			//监听Tab切换，以改变地址hash值
+			element.on('tab(test1)', function() {
+				location.hash = 'test1=' + this.getAttribute('lay-id');
+			});
+		});
+	</script>
+
+</html>
