@@ -8,7 +8,7 @@ $.fn.createPopupMenu = function(metadatas, left, top, row) {
 	}
 
 	function toString(obj) {
-		return encodeURIComponent(JSON.stringify(obj));
+		return Base64.encode(JSON.stringify(obj));
 	}
 	/**
 	 * 将JSON或者字符串转换为JSON对象
@@ -66,11 +66,11 @@ $.fn.createPopupMenu = function(metadatas, left, top, row) {
 						//菜单标题
 						' title="' + metadata.hint + '"' +
 						//菜单单击事件
-						' onClick="' + (metadata.onclick ? ('javascript:' + metadata.onclick + '(\'' + toString(row.data) + '\');') : 'javascript:alert(\'正在执行\');') + '"' +
+						' onClick="' + (metadata.onclick ? ('javascript:' + metadata.onclick + '(\'' + toString(row) + '\');') : 'javascript:alert(\'正在执行\');') + '"' +
 						//鼠标移入菜单事件
-						' onMousemove="' + (metadata.onmousemove ? ('javascript:' + metadata.onmousemove + '(\'' + toString(row.data) + '\');') : '') + '"' +
+						' onMousemove="' + (metadata.onmousemove ? ('javascript:' + metadata.onmousemove + '(\'' + toString(row) + '\');') : '') + '"' +
 						//鼠标移出菜单事件
-						' onMouseout="' + (metadata.onmouseout ? ('javascript:' + metadata.onmouseout + '(\'' + toString(row.data) + '\');') : '') + '"' +
+						' onMouseout="' + (metadata.onmouseout ? ('javascript:' + metadata.onmouseout + '(\'' + toString(row) + '\');') : '') + '"' +
 						'>' +
 						'<div class="menu-item-wrapper">' +
 						'<i class="popupMenu-menu-icon suyan4j-icon ' + (metadata.icon ? metadata.icon : '') + '"></i>' +
@@ -94,11 +94,11 @@ $.fn.createPopupMenu = function(metadatas, left, top, row) {
 						//菜单标题
 						' title="' + metadata.hint + '"' +
 						//菜单单击事件
-						' onClick="' + (metadata.onclick ? ('javascript:' + metadata.onclick + '(\'' + toString(row.data) + '\');') : '') + '"' +
+						' onClick="' + (metadata.onclick ? ('javascript:' + metadata.onclick + '(\'' + toString(row) + '\');') : '') + '"' +
 						//鼠标移入菜单事件
-						' onMousemove="' + (metadata.onmousemove ? ('javascript:' + metadata.onmousemove + '(\'' + toString(row.data) + '\');') : '') + '"' +
+						' onMousemove="' + (metadata.onmousemove ? ('javascript:' + metadata.onmousemove + '(\'' + toString(row) + '\');') : '') + '"' +
 						//鼠标移出菜单事件
-						' onMouseout="' + (metadata.onmouseout ? ('javascript:' + metadata.onmouseout + '(\'' + toString(row.data) + '\');') : '') + '"' +
+						' onMouseout="' + (metadata.onmouseout ? ('javascript:' + metadata.onmouseout + '(\'' + toString(row) + '\');') : '') + '"' +
 						'>' +
 						'<div class="menu-item-wrapper">' +
 						'<i class="popupMenu-menu-icon suyan4j-icon ' + (metadata.icon ? metadata.icon : '') + '"></i>' +

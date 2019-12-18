@@ -5,14 +5,14 @@
 		<meta charset="UTF-8">
 		<title></title>
         <!-- font:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.font.css -->
-        <link rel="stylesheet" id="font_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/css/font.css"/>
+        <link rel="stylesheet" id="font_1.0.0" type="text/css" href="/themes/xadmin/css/font.css"/>
         <!-- layer:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.css.modules.layer.default.layer.css -->
-        <link rel="stylesheet" id="layer_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/lib/layui/css/modules/layer/default/layer.css"/>
+        <link rel="stylesheet" id="layer_1.0.0" type="text/css" href="/themes/xadmin/lib/layui/css/modules/layer/default/layer.css"/>
         <!-- xadmin:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.css.xadmin.css -->
-        <link rel="stylesheet" id="xadmin_1.0.0" type="text/css" href="/suyan4j-xadmin/themes/xadmin/css/xadmin.css"/>
-        <link rel="stylesheet" href="/suyan4j-xadmin/javax/web/suyan4j/fonts/suyan4j-icon/suyan4j-icon.css" />
-		<link rel="stylesheet" href="/suyan4j-xadmin/themes/xadmin/lib/layui/css/layui.css" />
-        <link rel="stylesheet" href="/suyan4j-xadmin/themes/xadmin/lib/ui/popupmenu/css/popupMenu.css">
+        <link rel="stylesheet" id="xadmin_1.0.0" type="text/css" href="/themes/xadmin/css/xadmin.css"/>
+        <link rel="stylesheet" href="/javax/web/suyan4j/fonts/suyan4j-icon/suyan4j-icon.css" />
+		<link rel="stylesheet" href="/themes/xadmin/lib/layui/css/layui.css" />
+        <link rel="stylesheet" href="/themes/xadmin/lib/ui/popupmenu/css/popupMenu.css">
 	</head>
 
 	<body>
@@ -29,9 +29,9 @@
 	  {{#  } }}
 	</script>
     <!-- jquery:1.0.0 anonymous source:classpath:META-INF.resources.javax.web.suyan4j.vendors.jquery.jquery.js -->
-    <script type="text/javascript" src="/suyan4j-xadmin/javax/web/suyan4j/vendors/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/javax/web/suyan4j/vendors/jquery/jquery.js"></script>
     <!-- layui:1.0.0 anonymous source:classpath:META-INF.resources.themes.xadmin.lib.layui.layui.js -->
-    <script type="text/javascript" src="/suyan4j-xadmin/themes/xadmin/lib/layui/layui.js"></script>
+    <script type="text/javascript" src="/themes/xadmin/lib/layui/layui.js"></script>
 	<script>
 		layui.use('table', function() {
 			var table = layui.table;
@@ -41,7 +41,7 @@
 				height: 312,
 				toolbar: true,//开启表格头部工具栏区域
 				loading:true,//是否显示加载条（默认：true）。如果设置 false，则在切换分页时，不会出现加载条。该参数只适用于 url 参数开启的方式
-				url: '/suyan4j-xadmin/data/table.json', //数据接口
+				url: '/data/table.json', //数据接口
 				page: true, //开启分页
 				limit : 25, //默认每页显示记录数
 				where: {

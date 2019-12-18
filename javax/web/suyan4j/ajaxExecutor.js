@@ -1,4 +1,20 @@
 /**
+ * 构建Ajax接口调用的请求对象
+ * @param product 产品代码
+ * @param action 功能代码
+ * @param subAction 操作代码
+ * @param request 请求对象
+ * @returns {*}
+ */
+function ajaxRequest(product, action, subAction, request){
+	return {
+        "product": product,
+        "action": action,
+        "subAction": subAction,
+        "data": JSON.stringify(request ? request : {})
+    }
+}
+/**
  * 结果默认处理器
  * @param data 数据对象
  */
@@ -41,17 +57,10 @@ function responseHandler(response) {
  * @param resultHandler 结果处理器
  */
 function ajaxExecute(url, product, action, subAction, request, resultHandler) {
-    //构建远程调用的请求
-    var req = {
-        "product": product,
-        "action": action,
-        "subAction": subAction,
-        "data": JSON.stringify(request)
-    };
     $.ajax({
         type: 'POST',
         url: url,
-        data: req,
+        data: ajaxRequest(product, action, subAction, request),
         async: false,
         timeout:60000,//设置请求超时时间（毫秒）
         cache:false,//设置不缓存请求
